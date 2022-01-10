@@ -10,7 +10,6 @@ const multerConfig = {
   })
 };
 
-
 const upload = multer(multerConfig);
 
 export default upload;
