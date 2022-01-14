@@ -20,3 +20,13 @@ export async function check(req: Request, res: Response, next: NextFunction) {
     return handleError(res, 400, err.message ? err.message : err);
   }
 }
+
+// Optimized Solution
+// export const check = (number: number): number[] => {
+//   const numbers = Array.from({length: number}, (_, i) => i + 1);
+//   return numbers.filter(n => n % 10 !== 0 && isReversible(n + reversedNum(n)))
+// }
+//
+// const reversedNum = num => parseFloat(num.toString().split('').reverse().join(''))
+//
+// const isReversible = (number: number): Boolean => Array.from(number.toString()).map(Number).every(n => n % 2);
